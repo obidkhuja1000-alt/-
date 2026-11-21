@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { FlashcardsView } from './components/FlashcardsView';
 import { LearningPath } from './components/LearningPath';
 import { LessonPlayer } from './components/LessonPlayer';
+import { OfflineIndicator } from './components/OfflineIndicator';
 import { ProgressView } from './components/ProgressView';
 import { SentenceLibrary } from './components/SentenceLibrary';
 import { TopBar } from './components/TopBar';
@@ -200,6 +201,7 @@ export default function App() {
           )}
         </main>
       )}
+      <OfflineIndicator />
     </div>
   );
 }

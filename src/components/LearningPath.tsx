@@ -12,6 +12,7 @@ import {
 import { SENTENCES, UNITS } from '../data/curriculum';
 import { SentenceItem, Unit, UserProgress } from '../types/curriculum';
 import { speakChinese } from '../utils/speech';
+import { PWAInstallButton } from './PWAInstallButton';
 
 interface LearningPathProps {
   progress: UserProgress;
@@ -118,6 +119,8 @@ export function LearningPath({
               <BookOpen className="w-4 h-4" />
               <span>Смотреть все примеры</span>
             </button>
+
+            <PWAInstallButton />
           </div>
         </div>
 

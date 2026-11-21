@@ -11,6 +11,7 @@ import {
 import { SENTENCES, UNITS } from '../data/curriculum';
 import { UserProgress } from '../types/curriculum';
 import { speakChinese } from '../utils/speech';
+import { PWAInstallButton } from './PWAInstallButton';
 
 interface ProgressViewProps {
   progress: UserProgress;
@@ -41,9 +42,12 @@ export function ProgressView({
             Ваш прогресс по китайскому языку
           </h1>
           <p className="text-sm text-slate-600">
-            Прогресс автоматически сохраняется в браузере
+            Прогресс автоматически сохраняется в браузере и доступен офлайн
           </p>
         </div>
+
+        <div className="flex flex-wrap items-center gap-3 self-start sm:self-auto">
+          <PWAInstallButton showGuideFallback />
 
         {!confirmReset ? (
           <button
@@ -78,6 +82,7 @@ export function ProgressView({
             </button>
           </div>
         )}
+        </div>
       </div>
 
       {/* Summary KPI Grid */}
